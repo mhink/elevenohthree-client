@@ -1,5 +1,6 @@
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = require('./webpack.base.config.js')({
   output: {
@@ -10,6 +11,11 @@ module.exports = require('./webpack.base.config.js')({
     new HtmlWebpackPlugin({
       template: "index.html",
       inject: true,
-    })
-  ]
+    }),
+    new ExtractTextPlugin('[name].[contenthash].css')
+  ],
+  cssLoaders: ExtractTextPlugin.extract(
+    'style-loader',
+    'css-loader?&modules&importLoaders=1!postcss-loader'
+  )
 })

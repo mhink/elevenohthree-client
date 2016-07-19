@@ -11,5 +11,6 @@ module.exports = require('./webpack.base.config.js')({
       template: "index.html",
       inject: true,
     })
-  ]
+  ],
+  cssLoaders: 'style-loader!css-loader?localIdentName=[local]__[path][name]__[hash:base64:5]&modules&importLoaders=1&sourceMap!postcss-loader',
 })
