@@ -1,3 +1,7 @@
+:global body {
+  background-image: url('./white_paperboard.png')
+}
+
 :global main > p {
   color: #f00;
 }

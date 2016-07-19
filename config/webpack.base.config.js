@@ -17,6 +17,7 @@ module.exports = (options) => ({
     modules: [paths.source, paths.modules],
     extensions: ['', '.js']
   },
+  devServer: options.devServer,
 
   module: {
     loaders: [
@@ -34,6 +35,13 @@ module.exports = (options) => ({
         test: /\.css$/,
         include: /node_modules/,
         loaders: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.(jpg|png)$/,
+        loaders: [
+          'file-loader',
+          'image-webpack-loader'
+        ]
       }
     ]
   }
