@@ -3,11 +3,28 @@
   "version": "1.0.0",
   "description": "elevenohthree client SPA",
   "scripts": {
+    "start": "NODE_ENV=development webpack-dev-server --config config/webpack.dev.config.js",
+    "build": "NODE_ENV=production webpack --config config/webpack.prod.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "babel": {
+    "presets": ["react", "es2015", "stage-0"]
   },
   "author": "Matt Hink <mhink1103@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "webpack": "^1.13.1"
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-es2015-webpack": "^6.4.1",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "html-webpack-plugin": "^2.22.0",
+    "path": "^0.12.7",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "jquery": "^3.1.0"
   }
 }
