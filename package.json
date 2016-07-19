@@ -1,0 +1,13 @@
+{
+  "name": "elevenohthree-client",
+  "version": "1.0.0",
+  "description": "elevenohthree client SPA",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matt Hink <mhink1103@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^1.13.1"
+  }
+}
