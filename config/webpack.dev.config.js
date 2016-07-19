@@ -5,6 +5,7 @@ const host = "0.0.0.0"
 const port = "8080"
 
 module.exports = require('./webpack.base.config.js')({
+  devtool: 'cheap-module-eval-source-map',
   output: {
     filename: '[name].js',
     chunkFilename: '[name].chunk.js',

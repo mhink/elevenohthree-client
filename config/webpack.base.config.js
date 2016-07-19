@@ -7,6 +7,8 @@ const paths = {
 }
 
 module.exports = (options) => ({
+  target: 'web',
+  devtool: options.devtool,
   context: paths.source,
   entry: ['./main.js'],
   plugins: options.plugins,
