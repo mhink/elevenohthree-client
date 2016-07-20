@@ -1,0 +1,60 @@
+.card {
+  composes: card from 'styles/base.css';
+  margin: auto;
+  display: flex;
+  padding: 1rem;
+  width: 35rem;
+}
+
+.avatar {
+  height: 200px;
+  width: 200px;
+}
+
+.avatar img {
+  border: 0.25rem solid #313131;
+  border-radius: 1rem;
+  max-height: 100%;
+  max-width:  100%;
+}
+
+.contactInfo {
+  flex: 1 1 auto;
+}
+
+.contactInfo h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.contactInfo h2 {
+  font-size: 1.5rem;
+}
+
+.contactInfo h1,
+.contactInfo h2 {
+  color: #313131;
+  text-align: center;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  line-height: 1;
+  margin: 0.5rem;
+}
+
+.icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.contactInfo ul {
+  list-style-type: none;
+  margin: 0;
+  margin-left: -2rem;
+  padding: 0;
+}
+
+.contactInfo ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

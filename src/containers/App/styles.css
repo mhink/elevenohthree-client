@@ -7,6 +7,5 @@
 }
 
 .appMainWrapper {
-  composes: card from 'styles/base.css';
   composes: layoutElementWrapper from 'styles/layout.css';
 }

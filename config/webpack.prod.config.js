@@ -1,6 +1,8 @@
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
+require('dotenv').config()
+
 module.exports = require('./webpack.base.config.js')({
   output: {
     filename: '[name].[chunkhash].js',

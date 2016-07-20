@@ -1,0 +1,3 @@
+.homePageSection {
+  composes: card from "styles/base.css";
+}
