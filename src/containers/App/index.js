@@ -2,14 +2,28 @@ import React, { Component, PropTypes } from 'react'
 import { flow } from 'lodash'
 import { connect } from 'react-redux'
 
+import Header from 'components/Header'
+import Footer from 'components/Footer'
+
+import { 
+  outerWrapper,
+  innerWrapper
+} from './styles.css'
+
 class App extends Component {
   render () {
     const {children} = this.props
 
     return (
-      <main>
-        {children}
-      </main>
+      <div className={outerWrapper}>
+        <Header title="elevenohthree" wrapperClassName={innerWrapper}/>
+        <main>
+          <div className={innerWrapper}>
+            {children}
+          </div>
+        </main>
+        <Footer wrapperClassName={innerWrapper}/>
+      </div>
     )
   }
 }
