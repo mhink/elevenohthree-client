@@ -1,17 +1,20 @@
 import React, { PropTypes } from 'react'
 import { Link } from 'react-router'
 
-const Header = ({title, wrapperClassName}) => (
+import {
+  layoutElementWrapper
+} from "styles/layout.css"
+
+const Header = ({title}) => (
   <header>
-    <div className={wrapperClassName}>
+    <div className={layoutElementWrapper}>
       <Link to="/"><h1>{title}</h1></Link>
     </div>
   </header>
 )
 
 Header.propTypes = {
-  title: PropTypes.string.isRequired,
-  wrapperClassName: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired
 }
 
 export default Header

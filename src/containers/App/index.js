@@ -5,9 +5,13 @@ import { connect } from 'react-redux'
 import Header from 'components/Header'
 import Footer from 'components/Footer'
 
-import { 
-  outerWrapper,
-  innerWrapper
+import {
+  layoutWrapper,
+  layoutElementWrapper
+} from 'styles/layout.css'
+
+import {
+  appMain
 } from './styles.css'
 
 class App extends Component {
@@ -15,14 +19,14 @@ class App extends Component {
     const {children} = this.props
 
     return (
-      <div className={outerWrapper}>
-        <Header title="elevenohthree" wrapperClassName={innerWrapper}/>
-        <main>
-          <div className={innerWrapper}>
+      <div className={layoutWrapper}>
+        <Header title="elevenohthree" />
+        <main className={appMain}>
+          <div className={layoutElementWrapper}>
             {children}
           </div>
         </main>
-        <Footer wrapperClassName={innerWrapper}/>
+        <Footer />
       </div>
     )
   }

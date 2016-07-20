@@ -10,7 +10,7 @@ import configureStore from './store'
 import createRoutes from './routes'
 
 require("siimple")
-require("./styles.css")
+require("styles/base.css")
 
 const initialState = {}
 const store = configureStore(initialState, browserHistory)

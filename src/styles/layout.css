@@ -1,0 +1,15 @@
+.layoutWrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.layoutWrapper > * {
+  width: 100%;
+}
+
+.layoutElementWrapper {
+  width: 960px;
+  margin: 0 auto;
+}
