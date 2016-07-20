@@ -8,4 +8,5 @@ import {
 
 $(document).ready(() => {
   console.log("Hello, world!")
+  $("main").prepend("<p>Injected by JS</p>")
 })

@@ -19,6 +19,12 @@ module.exports = require('./webpack.base.config.js')({
     port: 8080
   },
   plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      children: true,
+      minChunks: 2,
+      async: true,
+    }),
     new HtmlWebpackPlugin({
       template: "index.html",
       inject: true,
