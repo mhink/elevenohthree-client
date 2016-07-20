@@ -1,3 +1,14 @@
+/* 
+ * NOTE: the ordering of 'composes' rules matters for some weird reason.
+ * Check out this PR, and update extract-text-webpack-plugin if it's been
+ * merged.
+ *
+ * https://github.com/webpack/extract-text-webpack-plugin/pull/166
+ */
+.appHeaderWrapper {
+  composes: layoutElementWrapper from 'styles/layout.css'; /* MAY CAUSE ERRORS */
+}
+
 .appHeader {
   background: white;
   composes: z-depth-1 from 'styles/base.css';
@@ -12,6 +23,4 @@
   margin: 0;
 }
 
-.appHeaderWrapper {
-  composes: layoutElementWrapper from 'styles/layout.css';
-}
+
