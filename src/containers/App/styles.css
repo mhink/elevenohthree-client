@@ -1,3 +1,12 @@
+.appWrapper {
+  composes: layoutWrapper from 'styles/layout.css'
+}
+
 .appMain {
   flex: 1 1 auto;
+}
+
+.appMainWrapper {
+  composes: card from 'styles/base.css';
+  composes: layoutElementWrapper from 'styles/layout.css';
 }

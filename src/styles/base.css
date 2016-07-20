@@ -28,5 +28,6 @@
   background: white;
   padding: 0.5rem 1rem;
   margin-bottom: 1.5rem;
+  border-radius: 0.25rem;
   composes: z-depth-3;
 }

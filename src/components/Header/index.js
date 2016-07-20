@@ -2,12 +2,13 @@ import React, { PropTypes } from 'react'
 import { Link } from 'react-router'
 
 import {
-  layoutElementWrapper
-} from "styles/layout.css"
+  appHeader,
+  appHeaderWrapper,
+} from "./styles.css"
 
 const Header = ({title}) => (
-  <header>
-    <div className={layoutElementWrapper}>
+  <header className={appHeader}>
+    <div className={appHeaderWrapper}>
       <Link to="/"><h1>{title}</h1></Link>
     </div>
   </header>

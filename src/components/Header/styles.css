@@ -1,0 +1,6 @@
+.appHeader {
+}
+
+.appHeaderWrapper {
+  composes: layoutElementWrapper from 'styles/layout.css';
+}

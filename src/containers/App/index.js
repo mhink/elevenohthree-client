@@ -6,12 +6,9 @@ import Header from 'components/Header'
 import Footer from 'components/Footer'
 
 import {
-  layoutWrapper,
-  layoutElementWrapper
-} from 'styles/layout.css'
-
-import {
-  appMain
+  appWrapper,
+  appMain,
+  appMainWrapper
 } from './styles.css'
 
 class App extends Component {
@@ -19,10 +16,10 @@ class App extends Component {
     const {children} = this.props
 
     return (
-      <div className={layoutWrapper}>
+      <div className={appWrapper}>
         <Header title="elevenohthree" />
         <main className={appMain}>
-          <div className={layoutElementWrapper}>
+          <div className={appMainWrapper}>
             {children}
           </div>
         </main>

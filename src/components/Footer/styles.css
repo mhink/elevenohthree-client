@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.appFooterWrapper {
+  composes: layoutElementWrapper from 'styles/layout.css';
+}
+
 .faint {
   opacity: 0.5;
   font-size: 0.75rem;
