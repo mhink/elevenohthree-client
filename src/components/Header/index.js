@@ -4,12 +4,13 @@ import { Link } from 'react-router'
 import {
   appHeader,
   appHeaderWrapper,
+  brandLink
 } from "./styles.css"
 
 const Header = ({title}) => (
   <header className={appHeader}>
     <div className={appHeaderWrapper}>
-      <Link to="/"><h1>{title}</h1></Link>
+      <Link to="/" className={brandLink}><h1>{title}</h1></Link>
     </div>
   </header>
 )

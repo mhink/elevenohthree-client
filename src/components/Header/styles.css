@@ -1,4 +1,15 @@
 .appHeader {
+  background: white;
+  composes: z-depth-1 from 'styles/base.css';
+  margin-bottom: 2rem;
+}
+
+.appHeader a.brandLink {
+  text-decoration: none;
+}
+
+.appHeader h1 {
+  margin: 0;
 }
 
 .appHeaderWrapper {
