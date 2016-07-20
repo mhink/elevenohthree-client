@@ -8,15 +8,21 @@ const paths = {
 
 module.exports = (options) => ({
   target: 'web',
+
   devtool: options.devtool,
+
   context: paths.source,
+
   entry: ['./main.js'],
+
   plugins: options.plugins,
+
   output: Object.assign({
     path:       paths.output,
   }, options.output),
+
   resolve: {
-    modules: [paths.source, paths.modules],
+    modulesDirectories: ['src', 'node_modules'],
     extensions: ['', '.js']
   },
 
