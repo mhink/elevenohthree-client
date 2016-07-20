@@ -1,12 +1,14 @@
 import React, { Component, PropTypes } from 'react'
 import { flow } from 'lodash'
 import { connect } from 'react-redux'
+import AuthButton from 'components/AuthButton'
 
 class HomePage extends Component {
   render () {
     return (
       <section>
         <p>Hello, world (from React)!</p>
+        <AuthButton />
       </section>
     )
   }
