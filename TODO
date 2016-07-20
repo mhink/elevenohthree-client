@@ -1,0 +1,2 @@
+- Figure out how to get a Heroku buildpack to provide environment variables to
+  webpack (as well as building it during deployment.)
