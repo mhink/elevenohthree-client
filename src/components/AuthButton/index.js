@@ -1,13 +1,20 @@
 import React, { PropTypes } from 'react'
+import cs from 'classnames'
+
+import {
+  authButton
+} from './styles.css'
+
+const classnames = () => cs('btn-small', 'btn-outline', authButton)
 
 const AuthButton = (props, context) => {
   const { isAuthenticated, onLogin, onLogout } = context
 
   if(isAuthenticated) {
-    return <button className='btn' onClick={onLogout}>Logout</button>
+    return <button className={classnames()} onClick={onLogout}>Logout</button>
   }
   else {
-    return <button className='btn' onClick={onLogin}>Login</button>
+    return <button className={classnames()} onClick={onLogin}>Login</button>
   }
 }
 
