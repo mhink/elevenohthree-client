@@ -8,6 +8,9 @@ module.exports = require('./webpack.base.config.js')({
     chunkFilename: '[name].[chunkhash].chunk.js'
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
+    }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       children: true,
