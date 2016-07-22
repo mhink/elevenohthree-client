@@ -1,14 +1,15 @@
 .card {
   composes: card from 'styles/base.css';
-  margin: auto;
-  display: flex;
-  padding: 1rem;
-  width: 35rem;
+  margin:   auto;
+  display:  flex;
+  padding:  1rem;
+  width:    35rem;
+  height:   16rem;
 }
 
 .avatar {
-  height: 200px;
-  width: 200px;
+  height: 14rem;
+  width:  14rem;
 }
 
 .avatar img {
@@ -20,6 +21,10 @@
 
 .contactInfo {
   flex: 1 1 auto;
+  margin-left: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
 }
 
 .contactInfo h1 {

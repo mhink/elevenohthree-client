@@ -2,14 +2,26 @@ import React, { Component, PropTypes } from 'react'
 import { flow, omit } from 'lodash'
 import { connect } from 'react-redux'
 import AuthButton from 'components/AuthButton'
-import BusinessCard from 'components/BusinessCard'
 import { fetchMessage } from "./actions"
+
+import BusinessCard from 'components/BusinessCard'
+import TiltCard from 'components/TiltCard'
+
+import {
+  businessCardBack
+} from './styles.css'
 
 class HomePage extends Component {
   render () {
+    const backChild = <div className={businessCardBack}><h1>Back</h1><p>This is the back.</p></div>
+
     return (
       <section>
-        <BusinessCard />
+        <TiltCard
+          width="37rem"
+          height="16rem"
+          frontChild={<BusinessCard/>}
+          backChild={backChild} />
       </section>
     )
   }

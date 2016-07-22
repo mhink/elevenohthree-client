@@ -1,2 +1,6 @@
-- Figure out how to get a Heroku buildpack to provide environment variables to
-  webpack (as well as building it during deployment.)
+
+
+- <FlipCard> _must_ have a <Front> child
+- <FlipCard> _may_ have a <Back> child
+
+- When rendered initially, 

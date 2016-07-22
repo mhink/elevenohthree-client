@@ -1,3 +1,9 @@
 .homePageSection {
   composes: card from "styles/base.css";
 }
+
+.businessCardBack {
+  composes: card from "styles/base.css";
+  width: 35rem;
+  height: 16rem;
+}

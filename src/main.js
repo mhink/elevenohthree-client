@@ -27,3 +27,5 @@ ReactDOM.render(
   </Provider>,
   $("#app")[0]
 )
+
+window.$ = $;
