@@ -12,6 +12,14 @@ import createRoutes from './routes'
 require("siimple")
 require("styles/base.css")
 
+require("file?name=[name].[ext]!static/404.html")
+require("file?name=[name].[ext]!static/422.html")
+require("file?name=[name].[ext]!static/500.html")
+require("file?name=[name].[ext]!static/apple-touch-icon-precomposed.png")
+require("file?name=[name].[ext]!static/apple-touch-icon.png")
+require("file?name=[name].[ext]!static/favicon.ico")
+require("file?name=[name].[ext]!static/robots.txt")
+
 const initialState = {}
 const store = configureStore(initialState, browserHistory)
 const history = syncHistoryWithStore(browserHistory, store)
