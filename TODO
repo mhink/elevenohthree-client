@@ -1,6 +1,0 @@
-
-
-- <FlipCard> _must_ have a <Front> child
-- <FlipCard> _may_ have a <Back> child
-
-- When rendered initially, 
