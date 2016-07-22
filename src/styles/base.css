@@ -1,3 +1,7 @@
+:global * {
+  box-sizing: border-box;
+}
+
 :global body {
   background-image: url('~images/white_paperboard.png')
 }
