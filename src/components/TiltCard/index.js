@@ -80,7 +80,6 @@ class TiltCard extends Component {
       const yCub    = Math.pow(yLin, 3)
 
       const diff = Math.abs(yCub - this.state.tilt)
-      console.log(diff)
       if(diff > 0.02) {
         this.setState({
           tilt: yCub

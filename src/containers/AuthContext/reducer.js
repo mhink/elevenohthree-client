@@ -10,7 +10,7 @@ const initialState = {
   isFetching:       false,
   isAuthenticated:  localStorage.getItem('id_token') ? true : false,
   token:            localStorage.getItem('id_token'),
-  profile:          localStorage.getItem('profile')
+  profile:          JSON.parse(localStorage.getItem('profile'))
 }
 
 // The auth reducer. The starting state sets authentication

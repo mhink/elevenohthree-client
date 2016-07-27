@@ -6,6 +6,7 @@ import { fetchMessage } from "./actions"
 
 import BusinessCard from 'components/BusinessCard'
 import TiltCard from 'components/TiltCard'
+import CardBack from 'components/CardBack'
 
 import {
   businessCardBack
@@ -13,15 +14,14 @@ import {
 
 class HomePage extends Component {
   render () {
-    const backChild = <div className={businessCardBack}><h1>Back</h1><p>This is the back.</p></div>
-
     return (
       <section>
         <TiltCard
           width="37rem"
           height="16rem"
           frontChild={<BusinessCard/>}
-          backChild={backChild} />
+          backChild={<CardBack />}
+          />
       </section>
     )
   }

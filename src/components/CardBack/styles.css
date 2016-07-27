@@ -1,0 +1,38 @@
+.cardBack {
+  composes: card from 'styles/base.css';
+  margin: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 1rem;
+  width: 35rem;
+  height: 16rem;
+}
+
+.avatar {
+  height: 14rem;
+  width: 14rem;
+  flex: 0 0 auto;
+}
+
+.avatar img {
+  border: 0.25rem solid #313131;
+  border-radius: 1rem;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.message {
+  flex: 0 1 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.message.authenticated {
+  margin-right: 1rem;
+}
+
+.message:not(.authenticated) {
+  padding: 2rem;
+}

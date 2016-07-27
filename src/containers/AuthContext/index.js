@@ -5,7 +5,7 @@ import { login, logout } from './actions'
 
 class AuthContext extends Component {
   getChildContext () {
-    return pick(this.props, ['isAuthenticated', 'onLogin', 'onLogout'])
+    return pick(this.props, ['isAuthenticated', 'profile', 'onLogin', 'onLogout'])
   }
 
   render () {
@@ -21,17 +21,19 @@ AuthContext.propTypes = {
   onLogin:          PropTypes.func.isRequired,
   onLogout:         PropTypes.func.isRequired,
   children:         PropTypes.node.isRequired,
+  profile:          PropTypes.object,
 }
 
 AuthContext.childContextTypes = {
   isAuthenticated:  PropTypes.bool.isRequired,
   onLogin:          PropTypes.func.isRequired,
   onLogout:         PropTypes.func.isRequired,
+  profile:          PropTypes.object,
 }
 
 function mapStateToProps(state) {
-  const { auth: { isAuthenticated }} = state
-  return { isAuthenticated }
+  const { auth: { isAuthenticated, profile }} = state
+  return { isAuthenticated, profile }
 }
 
 function mapDispatchToProps(dispatch, ownProps) {
