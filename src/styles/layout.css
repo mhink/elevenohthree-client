@@ -10,6 +10,9 @@
 }
 
 .layoutElementWrapper {
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto;
+  box-sizing: content-box;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
 }
