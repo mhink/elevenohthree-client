@@ -1,0 +1,13 @@
+.demoSection {
+  composes: card from "styles/base.css";
+  padding: 2rem;
+}
+
+.tickDebugger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  background: lightgray;
+  opacity: 0.5;
+}

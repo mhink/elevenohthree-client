@@ -1,0 +1,22 @@
+.byteSamples {}
+
+.byteSamples ul {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.animatedListItem {
+  margin: 0 1rem;
+  position: absolute;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: opacity 250ms ease-in-out, 
+              left 250ms ease-in-out,
+              right 250ms ease-in-out;
+}
