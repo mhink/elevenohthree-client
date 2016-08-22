@@ -100,7 +100,15 @@ module.exports = (options) => ({
       {
         test: /\.json$/,
         loader: 'json-loader'
+      },
+      {
+        test: /\.md$/,
+        loader: 'html!markdown'
       }
     ]
   },
+
+  markdownLoader: {
+
+  }
 })

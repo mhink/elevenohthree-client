@@ -1,6 +1,6 @@
 export const CACHE_LENGTH = 10
 export const BUFFER_LENGTH = 5
 
-export const INCREMENT_COUNTER = "INCREMENT_COUNTER"
-export const FILL_BYTES = "FILL_BYTES"
-export const RESET_BYTES = "RESET_BYTES"
+export const CONSUME_BYTES = "CONSUME_BYTES"
+export const FILL_CACHE = "FILL_CACHE"
+export const RESET = "RESET"

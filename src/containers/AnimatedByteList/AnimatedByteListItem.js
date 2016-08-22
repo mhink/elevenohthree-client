@@ -17,24 +17,12 @@ class AnimatedByteListItem extends Component {
     this._li.style.left = this.percentLeft()
   }
 
-  componentWillEnter(callback) {
-    this._li.style.left = this.percentLeft(1)
-    setTimeout(() => callback(), 10)
-  }
-
   componentDidEnter() {
     this._li.style.left = this.percentLeft()
   }
 
   componentDidUpdate(prevProps) {
     this._li.style.left = this.percentLeft()
-  }
-
-  componentWillLeave(callback) {
-    this._li.style.left = this.percentLeft(-1)
-    setTimeout(() => {
-      callback()
-    }, 250)
   }
 
   percentLeft(adjustment) {

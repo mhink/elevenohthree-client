@@ -1,21 +1,18 @@
 import {
-  INCREMENT_COUNTER,
-  FILL_BYTES,
-  RESET_BYTES,
-
-  CACHE_LENGTH,
-  BUFFER_LENGTH
+  CONSUME_BYTES,
+  FILL_CACHE,
+  RESET
 } from './constants'
 
 
-export function incrementCounter() {
-  return { type: INCREMENT_COUNTER }
+export function consumeBytes(count) {
+  return { type: CONSUME_BYTES, count }
 }
 
-export function fillBytes() {
+export function fillCache() {
   return { type: FILL_BYTES }
 }
 
-export function resetBytes() {
-  return { type: RESET_BYTES }
+export function reset() {
+  return { type: RESET }
 }

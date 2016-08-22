@@ -5,6 +5,7 @@ import { incrementCounter, fillBytes, resetBytes } from './actions.js'
 import { demoSection } from './styles.css'
 
 import AnimatedByteList from 'containers/AnimatedByteList'
+import PmfGraph from 'containers/PmfGraph'
 import Debugger from './Debugger.js'
 
 import {
@@ -32,18 +33,16 @@ class BoxMuellerDemo extends Component {
         <Title />
         <Intro />
         <Sampling>
-          <AnimatedByteList 
-            unit={(1 / CACHE_LENGTH) * 100} 
-            maxLength={CACHE_LENGTH} />
         </Sampling>
-        <Discrete />
+        <Discrete>
+        </Discrete>
       </div>
     )
   }
 
   startTimer () {
     const { onTick } = this.props
-    this.byteInterval = setInterval(() => onTick(), 1000)
+    this.byteInterval = setInterval(() => onTick(), 50)
   }
 
   stopTimer () {

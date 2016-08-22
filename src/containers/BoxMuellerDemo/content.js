@@ -24,10 +24,11 @@ export const Sampling = ({children}) => (
   </section>
 )
 
-export const Discrete = () => (
+export const Discrete = ({children}) => (
   <section>
     <h3>Discrete, Indiscreet</h3>
     <p>Mathematically, the result of taking one sample of this stream is a random variable <span>𝐁 = 𝒰{"{0, 255}"}</span>. Accordingly, the probability of any particular outcome is <span>𝑓<sub>𝐁</sub> (b) = {"1/256"}</span>, or about <em>{"0.0039"}</em>.</p>
     <p>In order to get a better idea of what this means, the bar graph below shows all possible outcomes, with their relative rates of occurrence.  If our distribution of bytes is truly uniform, these bars should settle at {"0.39%"}.</p>
+    {children}
   </section>
 )

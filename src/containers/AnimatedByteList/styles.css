@@ -16,7 +16,4 @@
   text-align: center;
   font-size: 1.2rem;
   font-weight: bold;
-  transition: opacity 250ms ease-in-out, 
-              left 250ms ease-in-out,
-              right 250ms ease-in-out;
 }

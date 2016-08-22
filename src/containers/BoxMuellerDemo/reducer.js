@@ -1,11 +1,11 @@
 import {
-  isUndefined, keys
+  isUndefined, keys, range
 } from 'lodash'
 
 import {
-  INCREMENT_COUNTER,
-  FILL_BYTES,
-  RESET_BYTES,
+  CONSUME_BYTES,
+  FILL_CACHE,
+  RESET,
 
   CACHE_LENGTH,
   BUFFER_LENGTH
@@ -25,7 +25,34 @@ const initialState = {
   bytes:          {
     0: initialBuffer[0]
   },
-  byteCounter: 1
+  byteCounter: 1,
+  distribution: range(256).map(i => ({x: i, y: 0, nx: 0}))
+}
+
+// TODO: some reducer methods aren't properly using 'newBytes'.
+//       This might have a performance problem, because we're
+//       kind of allocating a lot of objects in this function...
+function addBytesToDistribution(state, newBytes) {
+  const {distribution, byteCounter} = state
+
+  const newDistribution = []
+
+  for(let dval of distribution) {
+    newDistribution[dval.x] = Object.assign({}, dval)
+  }
+
+  for(let newByte of newBytes) {
+    newDistribution[newByte].nx += 1
+  }
+
+  for(let ndval of newDistribution) {
+    ndval.y = ndval.nx / byteCounter
+  }
+
+  return {
+    ...state,
+    distribution: newDistribution
+  }
 }
 
 function safeIncrementBuffer(state) {
@@ -74,12 +101,14 @@ function incrementBytes(state) {
   if(keys(newBytes).length > CACHE_LENGTH) {
     delete newBytes[byteCounter - CACHE_LENGTH]
   }
+  const { distribution } = addBytesToDistribution(state, [newByte])
 
   return {
     ...state,
     ...safeIncrementBuffer(state),
     byteCounter: byteCounter + 1,
-    bytes: newBytes
+    bytes: newBytes,
+    distribution
   }
 }
 
@@ -93,6 +122,11 @@ function fillBytes(state) {
   }
   return state
 }
+
+function bufferIndexReducer(state, action) {
+  case Fill
+}
+
 
 export default function(state=initialState, action) {
   switch(action.type) {
