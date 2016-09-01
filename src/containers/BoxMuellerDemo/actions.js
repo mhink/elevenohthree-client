@@ -1,18 +1,7 @@
-import {
-  CONSUME_BYTES,
-  FILL_CACHE,
-  RESET
-} from './constants'
+export const CONSUME_BYTE = "CONSUME_BYTE"
 
-
-export function consumeBytes(count) {
-  return { type: CONSUME_BYTES, count }
-}
-
-export function fillCache() {
-  return { type: FILL_BYTES }
-}
-
-export function reset() {
-  return { type: RESET }
+export function consumeByte () {
+  return {
+    type: CONSUME_BYTE
+  }
 }
